@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+
+    <!-----This section of the code contains the the head(title) as well as the devices/platform for display and a link to Css file----->
+    <HEAD lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOGIN SIGNUP PAGE</title>
+        <link rel="stylesheet" href="style.css">
+    </HEAD>
+    <!-------------------------------------------End------------------------------>
+
+ <BODY>
+    <div class="container">
+        <div class="card">
+            <p>InovoKraft</p>
+            <div class="inner-box" id="card">
+
+                <!----This portion is also the login page----------------------------->
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="Your Email " required>
+                        <input type="password" class="input-box" placeholder="password" required>
+                        <button type="submit" class="submit-btn">submit</button>
+                        <input type="checkbox"><span>Remember me</span>
+                    </form>
+                         <a href="">Forgot Password</a>
+                         <buttton type="button" class="btn" oncLick="openSIGNUP()"><a>I don't have an account</a></buttton>
+                         <p>
+                            <H3>TEAM MEMBERS</H3>
+                            @EDMOND AKWASI <br>
+                            @EMMANUEL <br>
+                            @LARTZMANN
+                         </p>
+                </div>
+                <!------------------------------End-------------------------------->
+                <!----------------------------------------------------------------->  
+                
+                <!----This part is the sign up page-------------->
+                <div class="card-back">
+                    <form>
+                    <h2>SIGN UP</h2>
+                        <input type="text" class="input-box" placeholder="First Name">
+                        <input type="text" class="input-box" placeholder="Last Name">
+                        <input type="email" class="input-box" placeholder="username@gmail.com" required>
+                        <input type="password" class="input-box" placeholder="password" required>
+                        <input type="password" class="input-box" placeholder="Confirm password" required>
+                        <button type="submit" class="submit-btn">submit</button>
+                        <p>By clicking the submit button, you agree to Inovokraft Terms and condition and policy privacy</p>
+                    </form>
+                         <a href=""></a>
+                         <buttton type="button" class="btn" onclick="openLOGIN()"><a>I've an account</a></buttton>  
+                </div>
+                <!-----------------------------End----------------------------->
+                <!--------------------------------------------------------------->
+
+            </div>
+        </div>
+    </div>
+
+    <!-----This part is a small javascrip for the effect------------>
+    <script>
+        var card = document.getElementById("card")
+
+        function openSIGNUP(){
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLOGIN(){
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+    <!---------End---------------------------------------------------->
+
+ </BODY>   
+</HTML>

@@ -1,0 +1,201 @@
+/* this part is set for the initial spacing of the whole page */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* End */
+
+/* A small box where I like to fit in the form */
+.container{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: rgba(10, 10, 24, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End */
+
+/* Another small box(card) within the container which is acting as the rotating card */
+.card{
+    width: 550px;
+    height: 500px;
+    box-shadow: 0 0 50px 30px rgba(0,0,0,0.26);
+    perspective: 3000px;
+}
+/* End */
+
+/* This part is for setting up the card in the container */
+.inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 2.5s;
+}
+/* End */
+
+/* This section of the code is where i set an image to the card background but later i made all one color as you can see in the background */
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient rgb(32,187,245),rgb(32, 178, 197),url(background.png);
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+/* End */
+
+/* This section is for rotating the card from the front page to the back page at an angle of 180 degrees at the y axis */
+.card-back{
+    transform: rotateY(180deg);
+}
+/* End */
+
+/* This section of the css code is for setting up the heading of the page eg.sign up page etc */
+.card h2{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+/* End */
+
+/* This part is for designing the portion where the user input his/her details */
+.input-box{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 6px 0;
+    height: 32px;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
+/* End */
+
+/* The small small descriptions inside the boxes where the user enters the details */
+::placeholder{
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+}
+/* End */
+
+/* since the submit button is concern, this code is responsible for it outlook */
+button {
+    width: 25%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+/* End */
+
+/* i made the submit button relative so that the position of it woudn't be disturbed base on the movement of the page or any factor of that sort.
+it becomes sticky to it position */ 
+.submit-btn{
+    position: relative;
+}
+/* End */
+
+/* This section is the small circular arrow beside the submit button */
+.submit-btn::after{
+    content: '\27a4';
+    color: #333;
+    line-height: 32px;
+    font-size: 17px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+} 
+/* End */
+
+/* This section defines how the remember me text looks */
+span{
+    font-size: 13px;
+    margin-left: 10px;
+}
+/* End */
+
+/* the spaces given to the top of all the buttons */
+.card .btn{
+    margin-top: 70px;
+}
+
+/* This section defines all the text in the anchor tag eg. I don't have an account*/
+.card a{
+    color: #00ff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+/* End */
+
+/* This section is where when you poin the mouse pointer to any of the buttons it changes to a hand pointer and some font changes */
+buttton{
+    cursor: pointer;
+    font-size: 24px; 
+    text-align: center;   
+}
+/* End */
+
+
+/* From this part downwards i try adding some other stuff, some worked some  did not. When i erase it too , 
+it affect the design so i desided to leave it. I READ A TEXT WHICH SAYS 'ONE RULE OF CODING IS THAT IF THE CODE  WORKS DON'T TOURCH IT' 
+it sounds funny but i can testify to that */
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form2 button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+form3 input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 6px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
+P{
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+/* End */
